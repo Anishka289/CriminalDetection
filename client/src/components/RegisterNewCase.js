@@ -66,12 +66,16 @@ const useStyles = {
 
 const INITIAL_STATE = {
   id: "",
-  email: "prajjwal@gmail.com",
+  //email: "anishka@gmail.com",
   firstName: "",
   lastName: "",
-  mobile: "1234567890",
+  //mobile: "1234567890",
   age: "20",
-  address: "",
+  crimes_done:"kidnapping",
+  identification_mark:"scar on face",
+  nationality:"Indian",
+  height:"6",
+  //address: "",
   image: null,
   error: null,
 };
@@ -86,12 +90,13 @@ class RegisterNewCaseBase extends Component {
     event.preventDefault();
     const id = Date.now();
     const newMissing = {
-      email: this.state.email,
       firstName: this.state.firstName,
       lastName: this.state.lastName,
-      mobile: this.state.mobile,
       age: this.state.age,
-      address: this.state.address,
+      crimes_done: this.state.crimes_done,
+      identifiction_mark: this.state.identification_mark,
+      nationality: this.state.nationality,
+      height: this.state.height,
     };
 
     this.props.firebase.db.doc(`/missing/${id}`).set(newMissing);
@@ -181,31 +186,6 @@ class RegisterNewCaseBase extends Component {
                   variant="outlined"
                   required
                   fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
-                  onChange={this.onChange}
-                />
-              </Grid>
-
-              <Grid item xs={12}>
-                <TextField
-                  variant="outlined"
-                  required
-                  fullWidth
-                  id="mobile"
-                  label="Mobile Number"
-                  name="mobile"
-                  autoComplete="mobile"
-                  onChange={this.onChange}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  variant="outlined"
-                  required
-                  fullWidth
                   id="age"
                   label="Age"
                   name="age"
@@ -218,10 +198,48 @@ class RegisterNewCaseBase extends Component {
                   variant="outlined"
                   required
                   fullWidth
-                  id="address"
-                  label="Address"
-                  name="address"
-                  autoComplete="address"
+                  id="crimes_done"
+                  label="Crime"
+                  name="crimes_done"
+                  autoComplete="Crime"
+                  onChange={this.onChange}
+                />
+              </Grid>
+
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="identification_mark"
+                  label="Mark"
+                  name="identification_mark"
+                  autoComplete="Mark"
+                  onChange={this.onChange}
+                />
+              </Grid>
+              
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="nationality"
+                  label="Nationality"
+                  name="nationality"
+                  autoComplete="Nationality"
+                  onChange={this.onChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="height"
+                  label="Height"
+                  name="height"
+                  autoComplete="height"
                   onChange={this.onChange}
                 />
               </Grid>

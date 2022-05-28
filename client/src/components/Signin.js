@@ -69,7 +69,8 @@ class SignInBase extends Component {
       .doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState({ ...INITIAL_STATE });
-        this.props.history.push("/home");
+        console.log("success");
+        this.props.history.push("/landing");
       })
       .catch((error) => {
         this.setState({ error });

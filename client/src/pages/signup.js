@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Register from '../components/RegisterNewCase'
+import Register from '../components/Register'
 
 
 export default class signup extends Component {

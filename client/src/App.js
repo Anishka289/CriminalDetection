@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import { withFirebase } from "./components/Firebase";
+import { withAuthentication } from "./components/Session";
 
 //components
 import Navbar from "./components/Navbar";
@@ -40,11 +41,12 @@ class App extends Component {
             <Navbar />
             <div className="container">
               <Switch>
-                <Route exact path="/" component={landing} />
+                <Route exact path="/" component={login} />
                 <Route exact path="/signup" component={signup} />
                 <Route exact path="/login" component={login} />
                 <Route exact path="/findMissing" component={findMissing} />
                 <Route exact path="/register" component={registerNewCase} />
+                <Route exact path="/landing" component={landing} />
               </Switch>
             </div>
           </Router>
@@ -54,4 +56,4 @@ class App extends Component {
   }
 }
 
-export default withFirebase(App);
+export default withFirebase(withAuthentication(App));

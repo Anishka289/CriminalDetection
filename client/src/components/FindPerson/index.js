@@ -48,12 +48,13 @@ const useStyles = {
 };
 const INITIAL_STATE = {
   id: "",
-  email: null,
   firstName: null,
   lastName: null,
-  mobile: null,
   age: "20",
-  address: "",
+  crimes_done: "",
+  identification_mark:"",
+  nationality:"",
+  height:"",
   image: null,
   imageUrl: null,
   error: null,
@@ -237,109 +238,8 @@ class FindPersonBase extends Component {
                     <Typography gutterBottom={true}></Typography>
                   </Grid>
                 </Grid>
-                <Grid
-                  container
-                  direction="row"
-                  justify="center"
-                  alignItems="center"
-                >
-                  <Grid item xs={3}>
-                    <Typography
-                      variant="h5"
-                      color="primary"
-                      gutterBottom={true}
-                    >
-                      <b>Email</b>
-                    </Typography>
-                    <Divider variant="middle" />
-                    <Typography gutterBottom={true}></Typography>
-                  </Grid>
-                  <Grid item xs={3}>
-                    <Typography variant="h5" gutterBottom={true}>
-                      <b>:</b>
-                    </Typography>
-                    <Typography gutterBottom={true}></Typography>
-                  </Grid>
-                  <Grid item xs={3}>
-                    <Typography
-                      variant="h5"
-                      color="primary"
-                      gutterBottom={true}
-                    >
-                      {this.state.email}
-                    </Typography>
-                    <Divider variant="middle" />
-                    <Typography gutterBottom={true}></Typography>
-                  </Grid>
-                </Grid>
-                <Grid
-                  container
-                  direction="row"
-                  justify="center"
-                  alignItems="center"
-                >
-                  <Grid item xs={3}>
-                    <Typography
-                      variant="h5"
-                      color="secondary"
-                      gutterBottom={true}
-                    >
-                      <b>Mobile Number</b>
-                    </Typography>
-                    <Divider variant="middle" />
-                    <Typography gutterBottom={true}></Typography>
-                  </Grid>
-                  <Grid item xs={3}>
-                    <Typography variant="h5" gutterBottom="true">
-                      <b>:</b>
-                    </Typography>
-                    <Typography gutterBottom={true}></Typography>
-                  </Grid>
-                  <Grid item xs={3}>
-                    <Typography
-                      variant="h5"
-                      color="secondary"
-                      gutterBottom="true"
-                    >
-                      {this.state.mobile}
-                    </Typography>
-                    <Divider variant="middle" />
-                    <Typography gutterBottom={true}></Typography>
-                  </Grid>
-                </Grid>
-                <Grid
-                  container
-                  direction="row"
-                  justify="center"
-                  alignItems="center"
-                >
-                  <Grid item xs={3}>
-                    <Typography
-                      variant="h5"
-                      color="primary"
-                      gutterBottom={true}
-                    >
-                      <b>Address</b>
-                    </Typography>
-                    <Divider variant="middle" />
-                  </Grid>
-                  <Grid item xs={3}>
-                    <Typography variant="h5" gutterBottom={true}>
-                      <b>:</b>
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={3}>
-                    <Typography
-                      variant="h5"
-                      color="primary"
-                      gutterBottom={true}
-                    >
-                      {this.state.address}
-                    </Typography>
-                    <Divider variant="middle" />
-                  </Grid>
-                </Grid>
 
+                
                 <Grid
                   container
                   direction="row"
@@ -374,6 +274,146 @@ class FindPersonBase extends Component {
                     <Divider variant="middle" />
                   </Grid>
                 </Grid>
+
+                <Grid
+                  container
+                  direction="row"
+                  justify="center"
+                  alignItems="center"
+                >
+                  <Grid item xs={3}>
+                    <Typography
+                      variant="h5"
+                      color="primary"
+                      gutterBottom={true}
+                    >
+                      <b>Crimes Done</b>
+                    </Typography>
+                    <Divider variant="middle" />
+                    <Typography gutterBottom={true}></Typography>
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Typography variant="h5" gutterBottom={true}>
+                      <b>:</b>
+                    </Typography>
+                    <Typography gutterBottom={true}></Typography>
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Typography
+                      variant="h5"
+                      color="primary"
+                      gutterBottom={true}
+                    >
+                      {this.state.crimes_done}
+                    </Typography>
+                    <Divider variant="middle" />
+                    <Typography gutterBottom={true}></Typography>
+                  </Grid>
+                </Grid>
+                <Grid
+                  container
+                  direction="row"
+                  justify="center"
+                  alignItems="center"
+                >
+                  <Grid item xs={3}>
+                    <Typography
+                      variant="h5"
+                      color="secondary"
+                      gutterBottom={true}
+                    >
+                      <b>Identification Mark</b>
+                    </Typography>
+                    <Divider variant="middle" />
+                    <Typography gutterBottom={true}></Typography>
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Typography variant="h5" gutterBottom="true">
+                      <b>:</b>
+                    </Typography>
+                    <Typography gutterBottom={true}></Typography>
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Typography
+                      variant="h5"
+                      color="secondary"
+                      gutterBottom="true"
+                    >
+                      {this.state.identification_mark}
+                    </Typography>
+                    <Divider variant="middle" />
+                    <Typography gutterBottom={true}></Typography>
+                  </Grid>
+                </Grid>
+                <Grid
+                  container
+                  direction="row"
+                  justify="center"
+                  alignItems="center"
+                >
+                  <Grid item xs={3}>
+                    <Typography
+                      variant="h5"
+                      color="primary"
+                      gutterBottom={true}
+                    >
+                      <b>Nationality</b>
+                    </Typography>
+                    <Divider variant="middle" />
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Typography variant="h5" gutterBottom={true}>
+                      <b>:</b>
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Typography
+                      variant="h5"
+                      color="primary"
+                      gutterBottom={true}
+                    >
+                      {this.state.nationality}
+                    </Typography>
+                    <Divider variant="middle" />
+                  </Grid>
+                </Grid>
+
+                
+                <Grid
+                  container
+                  direction="row"
+                  justify="center"
+                  alignItems="center"
+                >
+                  <Grid item xs={3}>
+                    <Typography
+                      variant="h5"
+                      color="secondary"
+                      gutterBottom={true}
+                    >
+                      <b>Height</b>
+                    </Typography>
+
+                    <Typography gutterBottom={true}></Typography>
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Typography variant="h5" gutterBottom={true}>
+                      <b>:</b>
+                    </Typography>
+                    <Typography gutterBottom={true}></Typography>
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Typography
+                      variant="h5"
+                      color="primary"
+                      gutterBottom={true}
+                    >
+                      {this.state.height}
+                    </Typography>
+                    <Divider variant="middle" />
+                  </Grid>
+                </Grid>
+
               </Paper>
             </Grid>
             <Button
