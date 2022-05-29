@@ -98,5 +98,5 @@ if __name__ == '__main__':
     # print(os.getcwd());
     # predict("2.jpg")
     # print(os.getcwd() + '\dataset')
-   train(os.getcwd() + '\dataset')
-   # validate(os.getcwd() + '\\validate')
+   # train(os.getcwd() + '\dataset')
+    validate(os.getcwd() + '\\validate')
