@@ -228,7 +228,7 @@ class FindPersonBase extends Component {
                   <Grid item xs={3}>
                     <Typography
                       variant="h5"
-                      color="secondary"
+                      color="primary"
                       gutterBottom={true}
                     >
                       {" "}
@@ -284,7 +284,7 @@ class FindPersonBase extends Component {
                   <Grid item xs={3}>
                     <Typography
                       variant="h5"
-                      color="primary"
+                      color="secondary"
                       gutterBottom={true}
                     >
                       <b>Crimes Done</b>
@@ -336,7 +336,7 @@ class FindPersonBase extends Component {
                   <Grid item xs={3}>
                     <Typography
                       variant="h5"
-                      color="secondary"
+                      color="primary"
                       gutterBottom="true"
                     >
                       {this.state.identification_mark}
@@ -354,7 +354,7 @@ class FindPersonBase extends Component {
                   <Grid item xs={3}>
                     <Typography
                       variant="h5"
-                      color="primary"
+                      color="secondary"
                       gutterBottom={true}
                     >
                       <b>Nationality</b>

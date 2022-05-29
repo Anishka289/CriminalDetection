@@ -9,9 +9,9 @@ export default class Landing extends Component {
     return (
       <div>
         <Paper className="image" elevation={3}>
-          <h1>Police Station</h1>
+          <h1>Raavan</h1>
 
-          <h4>A web tool to help find criminal using AI</h4>
+          <h4>A web tool to help find criminals using AI</h4>
           <br />
           <br />
           <br />

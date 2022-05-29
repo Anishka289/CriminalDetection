@@ -9,7 +9,7 @@ export default class findMissing extends Component {
         <br></br>
         <br></br>
         <br></br>
-        <h1>Find Missing</h1>
+        <h1>Find Criminal</h1>
         <FindPerson />
       </div>
     );
